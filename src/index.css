@@ -1,9 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&display=swap");
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-customGradient bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .gradient-border {
+    position: relative;
+    display: inline-block;
+    padding: 1px; /* Adjust this for border width */
+    background: linear-gradient(
+      125.5deg,
+      #0a1f44 8.22%,
+      #5a4fcf 37.47%,
+      #40a8c4 75.07%
+    );
+    border-radius: 40px;
+  }
+
+
+  .gradient-border-inner {
+    @apply bg-white text-pink font-semibold text-lg px-8 py-4 rounded-[40px] flex items-center justify-center;
+    position: relative;
+    z-index: 1;
+  }
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root{
+:root {
   font-family: "Inter", sans-serif;
 }

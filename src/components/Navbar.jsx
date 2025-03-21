@@ -11,8 +11,11 @@ const Navbar = () => {
    };
 
    return (
-      <nav className="sticky top-0 z-50 bg-white border-b border-gray-200">
-         <div className="container px-4 mx-auto relative text-sm">
+      <nav className="sticky top-0 z-50  bg-white border-b border-gray-200 ">
+         <section className=" border-l border-l-customGray border-r border-r-customGray lg:mx-[100px] flex justify-center items-center ">
+
+        
+         <div className="container relative  w-full  px-4 text-sm ">
             <div className="flex justify-between items-center py-3">
                {/* Logo */}
                <div className="flex items-center flex-shrink-0">
@@ -38,7 +41,7 @@ const Navbar = () => {
 
             {/* Drawer for Small Screens */}
             {mobileDrawerOpen && (
-               <div className="fixed top-0 right-0 z-20 w-3/4 h-full bg-white shadow-lg flex flex-col items-center lg:hidden">
+               <div className="fixed top-0 right-0 z-20 w-[calc(100%-200px)] h-full bg-white shadow-lg flex flex-col items-center lg:hidden">
                   <button
                      onClick={toggleNavbar}
                      className="absolute top-4 right-4 text-gray-600"
@@ -60,6 +63,7 @@ const Navbar = () => {
                </div>
             )}
          </div>
+         </section>
       </nav>
    );
 };
